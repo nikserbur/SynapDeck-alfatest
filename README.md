@@ -39,7 +39,7 @@
 
 **Баги, сбои, непонятное поведение и предложения** — пишите в Telegram-бот:
 
-**[@SynapDesk_bot](https://t.me/SynapDesk_bot)**
+**[@SynapDesk_bot](https://t.me/SynapDeckReportBot)**
 
 По возможности укажите: Windows или Mac, что делали, что ожидали, что получилось (скриншот — идеально).
 
