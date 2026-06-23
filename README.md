@@ -81,15 +81,6 @@ SynapDesk — это локальный «второй мозг», в котор
 | **Редактор** | Вкладки, **split** (два столбца), синхронизация прокрутки, граф как отдельная вкладка. |
 | **AI (опционально)** | Локальный шлюз (Ollama + Qwen): пунктуация и выжимка текста без отправки данных в облако — см. [docs/llm.md](docs/llm.md). |
 
-### Основные фишки
-
-1. **Local-first и шифрование** — работа офлайн; vault = SQLite + зашифрованные тела + зеркало markdown на диске.
-2. **Единая сеть ссылок** — заметки, таблицы и диаграммы ссылаются друг на друга; граф показывает реальные связи, а не только папки.
-3. **Три типа контента в одном окне** — текст, таблица и схема без переключения между разными приложениями.
-4. **Obsidian-совместимые заметки** — папки и `.md` можно читать и править снаружи; синхронизация с индексом при открытии vault.
-5. **Десктопный UX** — горячие клавиши, DnD, контекстные меню, тёмная/светлая тема, статус сохранения.
-6. **Приватный AI** — опционально через свой LLM-шлюз на `127.0.0.1`, без обязательного SaaS.
-
 ### Для кого
 
 Для тех, кому нужен **личный «второй мозг»**: проекты, базы знаний, таблицы рядом с текстом, схемы процессов и быстрый поиск — с контролем над данными и без привязки к одному вендору облака.
@@ -113,16 +104,6 @@ SynapDesk/
 │   └── src/lib/          api.ts, store.svelte.ts, components
 └── schema/               (future) protobuf/typed IPC schemas
 ```
-
-Подробно про аккаунты, login и SQLite: **[docs/storage.md](docs/storage.md)**.
-
-Дизайн интерфейса (Figma UI3, токены, кнопки): **[docs/DESIGN.md](docs/DESIGN.md)**.
-
-Локальный LLM-шлюз (Ollama + Qwen, dev): **[docs/llm.md](docs/llm.md)** — `pnpm llm:dev`. **AI на сервере (Docker, без локального Ollama):** **[server/AI-NGROK.md](server/AI-NGROK.md)**.
-
-Облачный API (удалённый тест через ngrok): **`https://sandbar-mustiness-statistic.ngrok-free.dev`** — см. **[server/NGROK.md](server/NGROK.md)** и **[server/REMOTE-TEST.md](server/REMOTE-TEST.md)**. Локальный Docker: `cd server && docker compose up -d`. VPS + Caddy: **[server/DEPLOY.md](server/DEPLOY.md)**.
-
-Облако, E2EE sync, dual-password, сервер (~10 users): **[docs/server-roadmap/README.md](docs/server-roadmap/README.md)** — пошаговый план и промпты для агента.
 
 Beta-фидбек (Telegram-бот → Google Sheets): **[feedback-bot/README.md](feedback-bot/README.md)**.
 
